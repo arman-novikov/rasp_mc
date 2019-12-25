@@ -26,7 +26,7 @@ def mqtt_on_message(client, user_data, msg):
     try:
         TOPICS[topic](payload)
     except KeyError:
-        print(f"no handler for topic \"{topic}\"")
+        print("no handler for topic \"{}\"".format(topic))
 
 
 MQTT_client = mqtt.Client()
