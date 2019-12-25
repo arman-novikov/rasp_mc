@@ -36,7 +36,7 @@ class PlayerDecorator:
 
     def set_volume(self, volume):
         print("volume: ", volume)
-        if 100 <= volume >= 0:
+        if 0 <= volume <= 100:
             self._player.volume = volume
 
 
