@@ -1,0 +1,6 @@
+# Write your default config options here!
+# cpy to ~/.mplayer/config
+
+lirc = no
+softvol=true
+
