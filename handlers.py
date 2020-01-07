@@ -21,7 +21,6 @@ def mc1_resume(void):
 def mc1_vol_set(volume):
 	print("mc1_vol_set: ", volume)
 	action_player.set_volume(int(volume))
-	print("out of work")
 
 
 def mc1_lang_set(lang_index):
@@ -41,7 +40,6 @@ def mc2_resume(void):
 def mc2_vol_set(volume):
 	print("mc2_vol_set: ", volume)
 	back_player.set_volume(int(volume))
-	print("out of work")
 
 
 def music_play(track):
