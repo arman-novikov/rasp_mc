@@ -6,6 +6,25 @@ back_music = "atomic.mp3"
 
 back_player = PlayerDecorator(join(getcwd(), back_music))
 action_player = PlayerDecorator(join(getcwd(), ""))
+players = []
+
+
+def async_play(track):
+	print(f"async_pause: {track}")
+	for i in range(len(players)):
+		if not players[i].is_alive():
+			del players[i]
+	new_player = PlayerDecorator(join(getcwd(), track))
+	new_player.resume()
+	players.append(new_player)
+
+
+def async_stop(void):
+	print("async_stop")
+	global players
+	for player in players:
+		player.pause()
+	players = []
 
 
 def mc1_pause(void):
