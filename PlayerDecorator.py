@@ -39,6 +39,12 @@ class PlayerDecorator:
         if 0 <= volume <= 100:
             self._player.volume = volume
 
+    def is_alive(self):
+        return self._player.is_alive()
+
+    def quit(self):
+        self._player.quit()
+
 
 def play_one(_players, which):
     for i in range(len(_players)):
