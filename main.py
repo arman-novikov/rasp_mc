@@ -39,7 +39,7 @@ def mqtt_routine():
     print('MQTT: Connecting {0}:{1} ...'.format(MQTT_HOST, MQTT_PORT))
 
     while True:
-        MQTT_client.loop()
+        MQTT_client.loop_start()
         sleep(0.05)
 
 
